@@ -1,0 +1,30 @@
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Estilos para el formulario de agregar mascota */
+.formulario-agregar {
+    margin-top: 20px;
+}
+
+#btnAgregarMascota {
+    display: block;
+    margin-top: 100px;
+    margin-left: -170px;
+    margin-bottom: 20px;
+}
+

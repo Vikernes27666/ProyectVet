@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/web/Citas.jsp</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/dao/ClientesDAO.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/web/javascript/CitaModalEditar.js</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/web/Mascotas.jsp</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/dao/MascotasDAO.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/Modelo/Mascota.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/basededatos/Parametros.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/Modelo/Cliente.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/Modelo/Citas.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/web/Calendario.jsp</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/dao/CitaDAO.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/src/java/Controlador/EditarCitaServlet.java</file>
+            <file>file:/C:/Users/vieri/Desktop/ProyectVet/web/Clientes.jsp</file>
+        </group>
+    </open-files>
+</project-private>

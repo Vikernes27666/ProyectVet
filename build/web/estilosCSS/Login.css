@@ -1,0 +1,37 @@
+body {
+    background-image: url('../Img/Fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.logo {
+    font-size: 36px; /* Tamaño de fuente más pequeño */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold; /* Hace que el texto sea negrita */
+    font-family: 'Tu-Fuente-Aquí', sans-serif; /* Reemplaza 'Tu-Fuente-Aquí' por la fuente que desees */
+}
+.login-form {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+.login-form .logo {
+    margin-bottom: 20px;
+}
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.login-links a {
+    text-decoration: none;
+}
