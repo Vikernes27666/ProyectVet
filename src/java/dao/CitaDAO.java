@@ -193,4 +193,40 @@ public class CitaDAO {
 
         return listaCitas;
     }
+    
+    public Citas obtenerCitasPorId(int idCita) throws SQLException {
+       Citas cita = new Citas();
+        String query = SELECT+ " WHERE ci.ID = ? ;";
+        PreparedStatement statement = con.prepareStatement(query);
+        statement.setInt(1, idCita);
+        ResultSet resultSet = statement.executeQuery();
+        while (resultSet.next()) {
+            Cliente cliente = new Cliente();
+            Mascota mascota = new Mascota();
+            
+            // Llenado de datos del cliente
+            cliente.setDni(resultSet.getString("DniCliente"));
+            cliente.setNombre(resultSet.getString("Nombre"));
+            
+            // Llenado de datos de la mascota
+            mascota.setId(resultSet.getInt("IdMascota"));
+            mascota.setNombreAnimal(resultSet.getString("NombreAnimal"));
+            mascota.setColor(resultSet.getString("Color"));
+            mascota.setRaza(resultSet.getString("Raza"));
+            mascota.setSexoMascota(resultSet.getString("SexoAnimal"));
+            mascota.setEspecie(resultSet.getString("Especie"));
+            mascota.setCliente(cliente);
+            
+            //Llenado de datos de la cita
+            cita.setRazonCita(resultSet.getString("RazonCita"));
+            cita.setFechaCita(resultSet.getDate("FechaCita"));
+            cita.setEstado(resultSet.getString("Estado"));
+            cita.setID(resultSet.getInt("ID"));
+            cita.setDniCliente(resultSet.getString("DniCliente"));
+            cita.setIdMascota(resultSet.getInt("IdMascota"));
+            cita.setMascota(mascota);
+        }
+
+        return cita;
+    }
 }

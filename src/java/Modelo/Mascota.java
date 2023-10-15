@@ -91,5 +91,18 @@ public class Mascota {
         return "Mascota{" + "id=" + id + ", nombreMascota=" + nombreAnimal + ", sexoMascota=" + sexoMascota + ", raza=" + raza + ", color=" + color + ", especie=" + especie + ", cliente=" + cliente + '}';
     }
     
+    public String toJson() {
+        // Construye manualmente la cadena JSON
+        StringBuilder json = new StringBuilder();
+        json.append("{\"id\":").append(this.id).append(",");
+        json.append("\"nombreAnimal\":\"").append(this.nombreAnimal).append("\",");
+        json.append("\"sexoMascota\":\"").append(this.sexoMascota).append("\",");
+        json.append("\"raza\":\"").append(this.raza).append("\",");
+        json.append("\"color\":\"").append(this.color).append("\",");
+        json.append("\"especie\":\"").append(this.especie).append("\",");
+        json.append("\"cliente\":").append(this.cliente.toJson()).append("}");
+
+        return json.toString();
+    }
     
 }

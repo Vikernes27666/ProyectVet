@@ -22,7 +22,7 @@ public class AgendarCitaServlet extends HttpServlet {
         // Recuperar los parámetros del formulario
         String razonCita = request.getParameter("razonCita");
         String fechaCitaStr = request.getParameter("fechaCita");
-        int dniCliente = Integer.parseInt(request.getParameter("dniCliente"));
+        String dniCliente = request.getParameter("dniCliente");
         int idMascota = Integer.parseInt(request.getParameter("idMascota"));
         String estado = "Pendiente"; // Puedes establecer un valor predeterminado
 

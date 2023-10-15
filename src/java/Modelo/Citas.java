@@ -85,6 +85,21 @@ public class Citas {
         return "Citas{" + "ID=" + ID + ", RazonCita=" + RazonCita + ", FechaCita=" + FechaCita + ", DniCliente=" + DniCliente
                 + ", IdMascota=" + IdMascota + ", Estado=" + Estado + '}';
     }
+    
+   public String toJson() {
+    // Construye manualmente la cadena JSON
+    StringBuilder json = new StringBuilder();
+    json.append("{\"id\":").append(this.ID).append(",");
+    json.append("\"razonCita\":\"").append(this.RazonCita).append("\",");
+    json.append("\"fechaCita\":\"").append(this.FechaCita).append("\",");
+    json.append("\"dniCliente\":\"").append(this.DniCliente).append("\",");
+    json.append("\"idMascota\":").append(this.IdMascota).append(",");
+    json.append("\"mascota\":").append(this.mascota.toJson() ).append(",");
+    json.append("\"estado\":\"").append(this.Estado).append("\"}");
+
+   
+    return json.toString();
+}
 
     
 }

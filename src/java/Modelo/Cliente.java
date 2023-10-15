@@ -41,5 +41,13 @@ public class Cliente {
         return "Cliente{" + "dni=" + dni + ", nombre=" + nombre + '}';
     }
     
+    public String toJson() {
+        // Construye manualmente la cadena JSON
+        StringBuilder json = new StringBuilder();
+        json.append("{\"dni\":\"").append(this.dni).append("\",");
+        json.append("\"nombre\":\"").append(this.nombre).append("\"}");
+
+        return json.toString();
+    }
     
 }

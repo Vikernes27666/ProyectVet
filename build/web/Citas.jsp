@@ -1,3 +1,5 @@
+<%@page import="Modelo.Mascota"%>
+<%@page import="dao.MascotasDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modelo.Citas"%>
 <%@page import="dao.CitaDAO"%>
@@ -8,13 +10,17 @@
 
     Conexion c = new Conexion();
     CitaDAO citaDao = new CitaDAO();
+    MascotasDAO mascotaDao = new MascotasDAO();
     String searchTerm = request.getParameter("searchTerm"); // Obtiene el término de búsqueda
     if (searchTerm == null) {
         searchTerm = ""; // Establece el término de búsqueda en una cadena vacía si es nulo
     }
     ArrayList<Citas> listaCitas = citaDao.obtenerCitasPorTexto(searchTerm);
     System.out.println(searchTerm);
+    
+   
 %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -240,7 +246,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Modal para editar Cita -->                   
                 <div id="modalEditarCita" class="modal">
                     <div class="modal-content">
@@ -250,7 +255,7 @@
                                 <input type="hidden" id="editarCitaId" name="editarCitaId" value="">
                                 <div class="form-group">
                                     <label for="editarRazonCita">Razón de la cita:</label>
-                                    <input type="text" name="editarRazonCita" id="editarRazonCita" class="form-control" required>
+                                    <input type="text" name="editarRazonCita" id="editarRazonCita" class="form-control" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="editarFechaCita">Fecha de la cita:</label>
@@ -275,12 +280,11 @@
                                     <label for="editarIdMascota">ID de la Mascota:</label>
                                     <select name="editarIdMascota" id="editarIdMascota" class="form-control" required>
                                         <option value="">Selecciona un ID de Mascota</option>
-                                        <%
-                                            ResultSet mascotasEditar = c.smt.executeQuery("SELECT ID FROM mascotas");
-                                            while (mascotasEditar.next()) {
-                                                int idMascotaEditar = mascotasEditar.getInt("ID");
+                                        <% for (Mascota mascota : mascotaDao.obtenerMascotas()){
+                                            
+                                            
                                         %>
-                                        <option value="<%= idMascotaEditar%>"><%= idMascotaEditar%></option>
+                                        <option value="<%= mascota.getId() %>"><%= mascota.getNombreAnimal() %></option>
                                         <%
                                             }
                                         %>

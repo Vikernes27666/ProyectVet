@@ -8,20 +8,23 @@ function editarCita(idCita) {
     var editarIdMascota = document.getElementById("editarIdMascota");
     var editarEstado = document.getElementById("editarEstado");
 
-    // Aquí debes implementar la lógica para cargar los datos de la cita con el ID proporcionado (idCita).
-    // Puedes utilizar AJAX para obtener los detalles de la cita del servidor.
-    
-    // Ejemplo de cómo llenar los campos en el modal con datos ficticios:
-    editarCitaId.value = idCita;
-    editarRazonCita.value = "Razón de la cita";
-    editarFechaCita.value = "2023-10-15";
-    editarDniCliente.value = "12345678";  // DNI del cliente
-    editarIdMascota.value = "1";          // ID de la mascota
-    editarEstado.value = "Pendiente";     // Estado
+    // Utiliza fetch (u otra biblioteca AJAX) para obtener los detalles de la cita del servidor.
+    // Definir los datos que se enviarán en la solicitud POST (en este ejemplo, un objeto JSON).
 
-    // Abre el modal de edición
-    modal.style.display = "block";
+    // Realiza la solicitud POST al servidor.
+    fetch('ObtenerCitaServlet?idCita='+idCita)
+            .then(response => response.json())
+            .then(data => {
+                editarCitaId.value = data.id;
+                editarRazonCita.value = data.razonCita;
+                editarFechaCita.value = data.fechaCita;
+                editarDniCliente.value = data.dniCliente;
+                editarIdMascota.value = data.idMascota;
+                editarEstado.value = data.estado;
+                // Abre el modal de edición.
+                modal.style.display = "block";
+            })
+            .catch(error => console.error('Error:', error));
+
 }
-
-
 
