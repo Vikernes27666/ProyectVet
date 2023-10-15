@@ -1,0 +1,36 @@
+# Ignorar archivos y carpetas generados por NetBeans
+/nbproject/
+/build/
+/dist/
+/nbactions.xml
+/nb-configuration.xml
+/build.xml
+
+# Ignorar archivos y directorios específicos de Tomcat
+/target/
+/web/META-INF/context.xml
+
+# Ignorar archivos de configuración de NetBeans
+/*.iml
+/nb-configuration.xml
+
+# Ignorar archivos de configuración de Maven
+pom.xml
+*.jar
+
+# Ignorar archivos y directorios de dependencias
+/lib/
+/target/
+
+# Ignorar archivos de configuración de IDE y sistema
+/.idea/
+/.vscode/
+/.classpath
+/.project
+
+# Ignorar archivos de compilación
+*.class
+
+# Ignorar archivos de registro y caché
+*.log
+logs/
