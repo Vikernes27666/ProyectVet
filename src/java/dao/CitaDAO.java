@@ -63,11 +63,11 @@ public class CitaDAO {
         }
     }
 
-    public void eliminarCita(int id) {
+    public void eliminarCita(int citaID) {
         try {
             String SQLQuery = "DELETE FROM citas WHERE ID = ?";
             PreparedStatement statement = con.prepareStatement(SQLQuery);
-            statement.setInt(1, id);
+            statement.setInt(1, citaID);
             int records = statement.executeUpdate();
             System.out.println(records + " Registro(s) eliminado(s).");
         } catch (Exception e) {

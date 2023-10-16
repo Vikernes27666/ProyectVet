@@ -35,6 +35,8 @@
         <link href="estilosCSS/Citas.css" rel="stylesheet">
         <script src="javascript/CitasModal.js" defer ></script>
         <script src="javascript/CitaModalEditar.js" defer ></script>
+        <script src="javascript/CitaEliminar.js" defer ></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <header class="wrapperlado">
