@@ -14,7 +14,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Atenciones</title>
+    <title>Clientes</title>
       <script src="Script/Slidebar.js" defer ></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="estilosCSS/Slidebar.css" rel="stylesheet">
@@ -26,6 +26,8 @@
     <script src="javascript/PerfilEditar.js" defer ></script>
     <script src="javascript/PerfilEliminar.js" defer ></script>
     <script src="javascript/ClienteEliminar.js" defer ></script>
+    <script src="javascript/ClienteModalEditar.js" defer ></script>
+    
 </head>
 <body>
     <header class="wrapperlado">
@@ -120,7 +122,7 @@
             <!-- Botón para agregar un nuevo cliente -->
              <button id="btnAgregarPerfil" class="btn btn-primary">Agregar Cliente</button>
 
-            <!-- Modal para agregar perfil -->
+            <!-- Modal para agregar cliente -->
             <div id="modalAgregarPerfil" class="modal">
                 <div class="modal-content">
                     <h2>Agregar Nuevo Cliente</h2>
@@ -150,6 +152,27 @@
                     </div>
                 </form>
             </div>
+                        
+            <!-- Formulario para editar cliente -->            
+            <div id="modalEditarCliente" class="modal">
+                <div class="modal-content">
+                    <h2>Editar Cliente</h2>
+                    <div class="formulario-agregar">
+                        <form action="EditarClienteServlet" method="POST">
+                            <div class="form-group">
+                                <label for="editarClienteDNI">DNI:</label>
+                                <input type="text" id="editarClienteDNI" name="editarClienteDNI" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editarClienteNombre">Nombre:</label>
+                                <input type="text" name="editarClienteNombre" id="editarClienteNombre" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>    
+            
             <table class="table table-bordered" id="tablaClientes">
                 <thead>
                     <tr>

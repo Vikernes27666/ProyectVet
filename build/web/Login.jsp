@@ -45,6 +45,9 @@ try {
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="estilosCSS/Login.css" rel="stylesheet">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
 
     </style>
